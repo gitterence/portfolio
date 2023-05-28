@@ -25,6 +25,9 @@ module.exports = {
         burtons: "burtons",
         poppins: ["Poppins", "sans-serif"],
       },
+      minWidth: {
+        20: "20rem",
+      },
     },
   },
   plugins: [],

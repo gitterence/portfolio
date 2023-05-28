@@ -6,18 +6,28 @@ import { motion } from "framer-motion";
 import focusTimer from "../../public/focus_timer.png";
 import profilepic from "../../public/ty-profile-pic.png";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
+import {
+  BsFillSunFill,
+  BsFillMoonStarsFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+
+  const [width, setWidth] = useState(0);
+
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
   };
 
   return (
-    // <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
-
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-30 dark:bg-gray-800">
         <motion.div
@@ -30,7 +40,6 @@ export default function Home() {
           }}
         >
           {/*  Section 1  */}
-
           <section className="mb-16">
             <nav className="py-10 mb-3 flex justify-between">
               <h1 className="text-xl font-mono dark:text-gray-50">Portfolio</h1>
@@ -101,10 +110,11 @@ export default function Home() {
               <h3 className="text-xl py-1 mb-5 dark:text-gray-200">About me</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
                 Hi, my name is Terence Ye. As a{" "}
-                <span className="text-teal-500">Software Engineer</span>, I am
+                <span className="text-teal-500">Software Engineer</span> with{" "}
+                <span className="text-teal-500"> Full-Stack </span> skills, I am
                 designing products and developing features at&nbsp;
                 <a
-                  className="text-blue-400 hover:underline"
+                  className="text-blue-500 hover:underline"
                   href="https://www.indeed.com/about"
                   target="_blank"
                 >
@@ -114,9 +124,10 @@ export default function Home() {
                 opportunities everyday. With a traditional background of
                 Bachelor's and Master's degrees in{" "}
                 <span className="text-teal-500">Computer Science</span>, I've
-                had the privilege of building software for both a start-up and a
-                tech corporation. Nevertheless, I am in constant pursuit of
-                skills that can transform me into a well-rounded professional.
+                had the privilege of building software for companies from
+                start-ups to tech corporations. Nevertheless, I am in constant
+                pursuit of skills that can transform me into a well-rounded
+                professional.
               </p>
             </div>
 
@@ -124,7 +135,8 @@ export default function Home() {
 
             {/*  Cards  */}
             <div className="lg:flex gap-10 lg:justify-center">
-              <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              {/*  Card Original  */}
+              {/* <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Frontend Implementation
                 </h3>
@@ -136,38 +148,54 @@ export default function Home() {
                 <p className="text-gray-800 py-1 dark:text-gray-300">
                   Javascript
                 </p>
+              </div> */}
+
+              {/*  Card FE  */}
+              <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+                <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
+                  Frontend Implementation
+                </h3>
+                <p className="text-gray-800 py-2 dark:text-gray-300">
+                  Turning designs into actual User Interface
+                </p>
+
+                <p className="py-1 text-teal-600">React</p>
+                <p className="py-1 text-teal-600">Javascript</p>
+                <p className="py-1 text-teal-600">Typescript</p>
+                <p className="py-1 text-teal-600">Angular</p>
+                <p className="py-1 text-teal-600">HTML & CSS</p>
               </div>
+
+              {/*  Card BE  */}
               <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Backend Development
                 </h3>
                 <p className="text-gray-800 py-2 dark:text-gray-300">
-                  Creating designs for a user interface
+                  Developing projects and services from ground-up
                 </p>
-                <h4 className="py-4 text-teal-600">Design tools I use</h4>
-                <p className="text-gray-800 py-1 dark:text-gray-300">Spring</p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">Java</p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">
-                  Restful API
-                </p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">GraphQL</p>
+
+                <p className="py-1 text-teal-600">Java, Python, C#</p>
+                <p className="py-1 text-teal-600">Spring</p>
+                <p className="py-1 text-teal-600">Restful API</p>
+                <p className="py-1 text-teal-600">GraphQL</p>
+                <p className="py-1 text-teal-600">SQL Relational Database</p>
               </div>
+
+              {/*  Card Infra  */}
               <div className=" bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Infrastructure
                 </h3>
                 <p className="text-gray-800 py-2 dark:text-gray-300">
-                  Creating designs for a user interface
+                  Building the foundation that supports any systems
                 </p>
-                <h4 className="py-4 text-teal-600">AWS</h4>
-                <p className="text-gray-800 py-1 dark:text-gray-300">AWS</p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">
-                  Terraform
-                </p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">Docker</p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">
-                  GitLab CI/CD
-                </p>
+
+                <p className="py-1 text-teal-600">Git</p>
+                <p className="py-1 text-teal-600">AWS</p>
+                <p className="py-1 text-teal-600">Terraform</p>
+                <p className="py-1 text-teal-600">Docker</p>
+                <p className="py-1 text-teal-600">GitLab CI/CD</p>
               </div>
             </div>
           </section>
@@ -175,72 +203,149 @@ export default function Home() {
           {/*  Section 3  */}
           <section>
             <h3 className="text-xl py-1 mb-5 dark:text-gray-200">Projects</h3>
-
+            {/*  Carousel Cards  */}
             <div className="flex justify-center">
-              <div className="max-w-sm rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
-                <Image
-                  src={focusTimer}
-                  className="w-full h-60 object-cover"
-                  alt="random stuff"
-                />
-                <div className="px-6 py-4">
-                  <div className="flex flex-row justify-between items-center mb-2">
-                    <div className="font-bold text-xl mb-2 dark:text-gray-200">
-                      Focus Time
+              <motion.div
+                className="cursor-grab overflow-hidden"
+                ref={carousel}
+                whileTap={{ cursor: "grabbing" }}
+              >
+                <motion.div
+                  className="flex"
+                  drag="x"
+                  dragConstraints={{ right: 0, left: -width }}
+                >
+                  {/*  Project Focus Time  */}
+                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                    <Image
+                      src={focusTimer}
+                      className="w-full h-60 object-cover pointer-events-none"
+                      alt="focus time app description"
+                    />
+                    <div className="px-6 py-4">
+                      <div className="flex flex-row justify-between items-center mb-2">
+                        <div className="font-bold text-xl mb-2 dark:text-gray-200">
+                          Focus Time
+                        </div>
+                        <motion.a
+                          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
+                          whileHover={{ scale: 1.2 }}
+                          href="https://gitterence.github.io/focus-time/"
+                          target="_blank"
+                        >
+                          View
+                        </motion.a>
+                      </div>
+
+                      <p className="text-base text-gray-800 dark:text-gray-300">
+                        A timer app that helps you to focus on task via pomodoro
+                        method.
+                      </p>
                     </div>
-                    <a
-                      className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
-                      href="https://gitterence.github.io/focus-time/"
-                      target="_blank"
-                    >
-                      View
-                    </a>
-                  </div>
+                    <div className="px-6 pt-4 pb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #React
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #Javascript
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #CSS
+                      </span>
+                    </div>
+                  </motion.div>
 
-                  <p className="text-base text-gray-800 dark:text-gray-300">
-                    A timer app that helps you to focus on task via pomodoro
-                    method.
-                  </p>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    #React
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    #Javascript
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    #CSS
-                  </span>
-                </div>
-              </div>
-            </div>
+                  {/*  Project Portfolio  */}
+                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                    <Image
+                      src={focusTimer}
+                      className="w-full h-60 object-cover pointer-events-none"
+                      alt="focus time app description"
+                    />
+                    <div className="px-6 py-4">
+                      <div className="flex flex-row justify-between items-center mb-2">
+                        <div className="font-bold text-xl mb-2 dark:text-gray-200">
+                          Focus Time
+                        </div>
+                        <motion.a
+                          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
+                          whileHover={{ scale: 1.2 }}
+                          href="https://gitterence.github.io/focus-time/"
+                          target="_blank"
+                        >
+                          View
+                        </motion.a>
+                      </div>
 
-            {/*  Project screenshots  */}
-            {/* <div className="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
+                      <p className="text-base text-gray-800 dark:text-gray-300">
+                        A timer app that helps you to focus on task via pomodoro
+                        method.
+                      </p>
+                    </div>
+                    <div className="px-6 pt-4 pb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #React
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #Javascript
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #CSS
+                      </span>
+                    </div>
+                  </motion.div>
+                  {/*  Project ?  */}
+                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                    <Image
+                      src={focusTimer}
+                      className="w-full h-60 object-cover pointer-events-none"
+                      alt="focus time app description"
+                    />
+                    <div className="px-6 py-4">
+                      <div className="flex flex-row justify-between items-center mb-2">
+                        <div className="font-bold text-xl mb-2 dark:text-gray-200">
+                          Focus Time
+                        </div>
+                        <motion.a
+                          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
+                          whileHover={{ scale: 1.2 }}
+                          href="https://gitterence.github.io/focus-time/"
+                          target="_blank"
+                        >
+                          View
+                        </motion.a>
+                      </div>
+
+                      <p className="text-base text-gray-800 dark:text-gray-300">
+                        A timer app that helps you to focus on task via pomodoro
+                        method.
+                      </p>
+                    </div>
+                    <div className="px-6 pt-4 pb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #React
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #Javascript
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #CSS
+                      </span>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={code} className="rounded-lg object-cover" />
-            </div>
-          </div> */}
+            <motion.div className="flex items-center justify-center text-md py-1 mb-5 dark:text-gray-200">
+              <p className="mr-3">Swipe </p>
+              {/* 👉 */}
+              <BsFillArrowRightCircleFill className="text-xl" />
+            </motion.div>
           </section>
-          {/*  Section 3  */}
+
+          {/*  Section 4  */}
           <section>
-            <div className="mt-5">
+            <div className="mt-5 pb-5">
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
                 A <span className="text-teal-500">journey </span>of a thousand
                 miles begins with a{" "}
