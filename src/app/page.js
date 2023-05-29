@@ -5,7 +5,14 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import focusTimer from "../../public/focus_timer.png";
 import profilepic from "../../public/ty-profile-pic.png";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import darkPortfolio from "../../public/dark_portfolio.png";
+import brightPortfolio from "../../public/bright_portfolio.png";
+import ipLocationMatching from "../../public/ip_location_matching.png";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiFillCopyrightCircle,
+} from "react-icons/ai";
 import {
   BsFillSunFill,
   BsFillMoonStarsFill,
@@ -109,10 +116,8 @@ export default function Home() {
             <div className="mb-10">
               <h3 className="text-xl py-1 mb-5 dark:text-gray-200">About me</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-                Hi, my name is Terence Ye. As a{" "}
-                <span className="text-teal-500">Software Engineer</span> with{" "}
-                <span className="text-teal-500"> Full-Stack </span> skills, I am
-                designing products and developing features at&nbsp;
+                Hi, my name is Terence Ye. I currently work as a{" "}
+                <span className="text-teal-500">Software Engineer</span> at{" "}
                 <a
                   className="text-blue-500 hover:underline"
                   href="https://www.indeed.com/about"
@@ -120,14 +125,24 @@ export default function Home() {
                 >
                   Indeed.com
                 </a>
-                &nbsp;to help connect millions of people to new career
-                opportunities everyday. With a traditional background of
-                Bachelor's and Master's degrees in{" "}
-                <span className="text-teal-500">Computer Science</span>, I've
-                had the privilege of building software for companies from
-                start-ups to tech corporations. Nevertheless, I am in constant
-                pursuit of skills that can transform me into a well-rounded
+                , where I design products and develop features that connect
+                millions of people with new career opportunities every day. With
+                over{" "}
+                <span className="text-teal-500">4+ years of experience</span>,
+                I've had the privilege of building software with{" "}
+                <span className="text-teal-500">Full-Stack skills</span> for
+                companies from start-ups to tech corporations. I'm constantly
+                driven to enhance my abilities and become a well-rounded
                 professional.
+              </p>
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
+                Crafting innovative solutions and creating seamless user
+                experiences are areas that I am passionate about. Meanwhile,
+                collaboration and open communication are essential to my work,
+                as I thrive in dynamic environments where ideas are shared and
+                refined. Hence, the opportunity to work alongside my talented
+                teams from the initial stages of ideation all the way to the
+                exhilarating launch is an experience I truly cherish.
               </p>
             </div>
 
@@ -151,7 +166,7 @@ export default function Home() {
               </div> */}
 
               {/*  Card FE  */}
-              <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Frontend Implementation
                 </h3>
@@ -160,14 +175,14 @@ export default function Home() {
                 </p>
 
                 <p className="py-1 text-teal-600">React</p>
+                <p className="py-1 text-teal-600">Angular</p>
                 <p className="py-1 text-teal-600">Javascript</p>
                 <p className="py-1 text-teal-600">Typescript</p>
-                <p className="py-1 text-teal-600">Angular</p>
                 <p className="py-1 text-teal-600">HTML & CSS</p>
               </div>
 
               {/*  Card BE  */}
-              <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Backend Development
                 </h3>
@@ -177,13 +192,13 @@ export default function Home() {
 
                 <p className="py-1 text-teal-600">Java, Python, C#</p>
                 <p className="py-1 text-teal-600">Spring</p>
-                <p className="py-1 text-teal-600">Restful API</p>
                 <p className="py-1 text-teal-600">GraphQL</p>
+                <p className="py-1 text-teal-600">Restful API</p>
                 <p className="py-1 text-teal-600">SQL Relational Database</p>
               </div>
 
               {/*  Card Infra  */}
-              <div className=" bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Infrastructure
                 </h3>
@@ -191,10 +206,10 @@ export default function Home() {
                   Building the foundation that supports any systems
                 </p>
 
-                <p className="py-1 text-teal-600">Git</p>
                 <p className="py-1 text-teal-600">AWS</p>
-                <p className="py-1 text-teal-600">Terraform</p>
+                <p className="py-1 text-teal-600">Script</p>
                 <p className="py-1 text-teal-600">Docker</p>
+                <p className="py-1 text-teal-600">Terraform</p>
                 <p className="py-1 text-teal-600">GitLab CI/CD</p>
               </div>
             </div>
@@ -216,7 +231,7 @@ export default function Home() {
                   dragConstraints={{ right: 0, left: -width }}
                 >
                   {/*  Project Focus Time  */}
-                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
                       src={focusTimer}
                       className="w-full h-60 object-cover pointer-events-none"
@@ -256,21 +271,30 @@ export default function Home() {
                   </motion.div>
 
                   {/*  Project Portfolio  */}
-                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
-                    <Image
-                      src={focusTimer}
-                      className="w-full h-60 object-cover pointer-events-none"
-                      alt="focus time app description"
-                    />
+                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                    {darkMode ? (
+                      <Image
+                        src={brightPortfolio}
+                        className="w-full h-60 object-cover pointer-events-none"
+                        alt="dark portfolio"
+                      />
+                    ) : (
+                      <Image
+                        src={darkPortfolio}
+                        className="w-full h-60 object-cover pointer-events-none"
+                        alt="bright portfolio"
+                      />
+                    )}
+
                     <div className="px-6 py-4">
                       <div className="flex flex-row justify-between items-center mb-2">
                         <div className="font-bold text-xl mb-2 dark:text-gray-200">
-                          Focus Time
+                          This Portfolio
                         </div>
                         <motion.a
                           className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
                           whileHover={{ scale: 1.2 }}
-                          href="https://gitterence.github.io/focus-time/"
+                          href="#"
                           target="_blank"
                         >
                           View
@@ -278,8 +302,7 @@ export default function Home() {
                       </div>
 
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        A timer app that helps you to focus on task via pomodoro
-                        method.
+                        A cool portfolio page for myself.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
@@ -287,57 +310,69 @@ export default function Home() {
                         #React
                       </span>
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #Javascript
+                        #Tailwind
                       </span>
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #CSS
+                        #NextJS
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #FramerMotion
                       </span>
                     </div>
                   </motion.div>
-                  {/*  Project ?  */}
-                  <motion.div className="min-w-20 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+
+                  {/*  Project SimplyHired IP Location Matching Service  */}
+                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
-                      src={focusTimer}
+                      src={ipLocationMatching}
                       className="w-full h-60 object-cover pointer-events-none"
                       alt="focus time app description"
                     />
                     <div className="px-6 py-4">
                       <div className="flex flex-row justify-between items-center mb-2">
                         <div className="font-bold text-xl mb-2 dark:text-gray-200">
-                          Focus Time
+                          SimplyHired
                         </div>
                         <motion.a
                           className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
                           whileHover={{ scale: 1.2 }}
-                          href="https://gitterence.github.io/focus-time/"
+                          href="https://www.simplyhired.com/"
                           target="_blank"
                         >
                           View
                         </motion.a>
                       </div>
-
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        A timer app that helps you to focus on task via pomodoro
-                        method.
+                        IP-Location-Matching Service is an end-to-end feature I
+                        implemented for SimplyHired.com to automatically fill
+                        the user's location in the search field by processing
+                        the IP address in the network request.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #Java
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                        #Spring Boot
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         #React
                       </span>
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #Javascript
-                      </span>
-                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #CSS
+                        #ChakraUI
                       </span>
                     </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
             </div>
-            <motion.div className="flex items-center justify-center text-md py-1 mb-5 dark:text-gray-200">
-              <p className="mr-3">Swipe </p>
+            <motion.div
+              className="flex items-center justify-center text-md py-1 mb-5 dark:text-gray-200"
+              animate={{ x: [0, 15, 15, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+            >
+              <p className="mr-3 font-mono">Swipe</p>
               {/* 👉 */}
               <BsFillArrowRightCircleFill className="text-xl" />
             </motion.div>
@@ -346,11 +381,32 @@ export default function Home() {
           {/*  Section 4  */}
           <section>
             <div className="mt-5 pb-5">
+              <h3 className="text-xl py-1 dark:text-gray-200">Lastly</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-                A <span className="text-teal-500">journey </span>of a thousand
-                miles begins with a{" "}
-                <span className="text-teal-500">single step</span>.
+                Allow me to share a meaningful quote from Lao Tzu: "
+                <span className="text-teal-500">
+                  A journey of a thousand miles begins with a single step
+                </span>
+                ." While the path ahead may appear daunting and seemingly
+                endless, I firmly believe that each of us possesses the
+                capability to navigate it one step at a time. Let us embrace the
+                notion that progress is achieved through steady momentum. As we
+                navigate this path, we may encounter obstacles and
+                uncertainties, but by remaining steadfast and focused on the
+                present moment, we can overcome any challenge that comes our
+                way.
               </p>
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
+                May today marks the start of our own remarkable journey.
+              </p>
+            </div>
+          </section>
+          {/*  Section 5  */}
+          <section>
+            <hr class="mt-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div className="flex items-center justify-end text-gray-800 dark:text-gray-300">
+              <AiFillCopyrightCircle className="mr-1" />
+              <p className="text-sm py-1 leading-8 ">/ 2023</p>
             </div>
           </section>
         </motion.div>

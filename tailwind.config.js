@@ -26,7 +26,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       minWidth: {
-        20: "20rem",
+        18: "18rem",
       },
     },
   },
