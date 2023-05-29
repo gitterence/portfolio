@@ -379,7 +379,7 @@ export default function Home() {
                 capability to navigate it one step at a time. Let us embrace the
                 notion that progress is achieved through steady momentum. As we
                 navigate this path, we may encounter obstacles and
-                uncertainties, but by remaining steadfast and focused on the
+                uncertainties, but by remaining determined and focused on the
                 present moment, we can overcome any challenge that comes our
                 way.
               </p>
