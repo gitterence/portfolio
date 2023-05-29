@@ -239,7 +239,9 @@ export default function Home() {
 
                       <p className="text-base text-gray-800 dark:text-gray-300">
                         A timer app that helps you to focus on task via pomodoro
-                        method.
+                        method. React hooks like useState, useEffect,
+                        useContext, etc are implemented to support count down
+                        function as well as other settings.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
