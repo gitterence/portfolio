@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import focusTimer from "../../public/focus_timer.png";
-import profilepic from "../../public/ty-profile-pic.png";
+import profilepic from "../../public/ty_profile_pic.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
 import ipLocationMatching from "../../public/ip_location_matching.png";
@@ -130,7 +130,7 @@ export default function Home() {
                 over{" "}
                 <span className="text-teal-500">4+ years of experience</span>,
                 I&apos;ve had the privilege of building software with{" "}
-                <span className="text-teal-500">Full-Stack skills</span> for
+                <span className="text-teal-500">Full-Stack Skills</span> for
                 companies from start-ups to tech corporations. I&apos;m
                 constantly driven to enhance my abilities and become a
                 well-rounded professional.
@@ -141,8 +141,8 @@ export default function Home() {
                 collaboration and open communication are essential to my work,
                 as I thrive in dynamic environments where ideas are shared and
                 refined. Hence, the opportunity to work alongside my talented
-                teams from the initial stages of ideation all the way to the
-                exhilarating launch is an experience I truly cherish.
+                teams from the initial stages of ideation to the exhilarating
+                launch is an experience I truly cherish.
               </p>
             </div>
 
@@ -150,21 +150,6 @@ export default function Home() {
 
             {/*  Cards  */}
             <div className="lg:flex gap-10 lg:justify-center">
-              {/*  Card Original  */}
-              {/* <div className="bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
-                <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
-                  Frontend Implementation
-                </h3>
-                <p className="text-gray-800 py-2 dark:text-gray-300">
-                  Creating designs for a user interface
-                </p>
-                <h4 className="py-4 text-teal-600">Design tools I use</h4>
-                <p className="text-gray-800 py-1 dark:text-gray-300">React</p>
-                <p className="text-gray-800 py-1 dark:text-gray-300">
-                  Javascript
-                </p>
-              </div> */}
-
               {/*  Card FE  */}
               <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
@@ -302,7 +287,9 @@ export default function Home() {
                       </div>
 
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        A cool portfolio page for myself.
+                        A cool portfolio page for myself. Libraries such as
+                        Tailwind and Framer Motion are utilized to build a
+                        modern and visual appealing web page.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
@@ -397,7 +384,7 @@ export default function Home() {
                 way.
               </p>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-                May today marks the start of our own remarkable journey.
+                May today mark the beginning of our remarkable journey.
               </p>
             </div>
           </section>
