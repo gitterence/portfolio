@@ -129,11 +129,11 @@ export default function Home() {
                 millions of people with new career opportunities every day. With
                 over{" "}
                 <span className="text-teal-500">4+ years of experience</span>,
-                I've had the privilege of building software with{" "}
+                I&apos;ve had the privilege of building software with{" "}
                 <span className="text-teal-500">Full-Stack skills</span> for
-                companies from start-ups to tech corporations. I'm constantly
-                driven to enhance my abilities and become a well-rounded
-                professional.
+                companies from start-ups to tech corporations. I&apos;m
+                constantly driven to enhance my abilities and become a
+                well-rounded professional.
               </p>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
                 Crafting innovative solutions and creating seamless user
@@ -345,8 +345,8 @@ export default function Home() {
                       <p className="text-base text-gray-800 dark:text-gray-300">
                         IP-Location-Matching Service is an end-to-end feature I
                         implemented for SimplyHired.com to automatically fill
-                        the user's location in the search field by processing
-                        the IP address in the network request.
+                        the user&apos;s location in the search field by
+                        processing the IP address in the network request.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">

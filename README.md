@@ -1,3 +1,9 @@
+## Portfolio page
+
+### Powered by React, NextJS, Tailwind, Framer Motion
+
+### credits to one of my favorite developer [Simo Edwin](https://github.com/developedbyed)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
