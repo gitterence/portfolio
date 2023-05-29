@@ -156,7 +156,7 @@ export default function Home() {
                   Frontend Implementation
                 </h3>
                 <p className="text-gray-800 py-2 dark:text-gray-300">
-                  Turning designs into actual User Interface
+                  Turning designs into actual user interface
                 </p>
 
                 <p className="py-1 text-teal-600">React</p>
@@ -172,7 +172,7 @@ export default function Home() {
                   Backend Development
                 </h3>
                 <p className="text-gray-800 py-2 dark:text-gray-300">
-                  Developing projects and services from ground-up
+                  Developing projects and services from the ground up
                 </p>
 
                 <p className="py-1 text-teal-600">Java, Python, C#</p>
@@ -238,10 +238,10 @@ export default function Home() {
                       </div>
 
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        A timer app that helps you to focus on task via pomodoro
-                        method. React hooks like useState, useEffect,
-                        useContext, etc are implemented to support count down
-                        function as well as other settings.
+                        A timer app that helps you to focus on a task via the
+                        Pomodoro method. React hooks like useState, useEffect,
+                        useContext, etc., are implemented to support countdown
+                        function and other settings.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
@@ -333,7 +333,7 @@ export default function Home() {
                       </div>
                       <p className="text-base text-gray-800 dark:text-gray-300">
                         IP-Location-Matching Service is an end-to-end feature I
-                        implemented for SimplyHired.com to automatically fill
+                        implemented for SimplyHired.com, to automatically fill
                         the user&apos;s location in the search field by
                         processing the IP address in the network request.
                       </p>
