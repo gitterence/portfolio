@@ -383,11 +383,11 @@ export default function Home() {
             <div className="mt-5 pb-5">
               <h3 className="text-xl py-1 dark:text-gray-200">Lastly</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-                Allow me to share a meaningful quote from Lao Tzu: "
+                Allow me to share a meaningful quote from Lao Tzu: &quot;
                 <span className="text-teal-500">
                   A journey of a thousand miles begins with a single step
                 </span>
-                ." While the path ahead may appear daunting and seemingly
+                .&quot; While the path ahead may appear daunting and seemingly
                 endless, I firmly believe that each of us possesses the
                 capability to navigate it one step at a time. Let us embrace the
                 notion that progress is achieved through steady momentum. As we
