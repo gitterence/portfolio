@@ -7,7 +7,7 @@ import focusTimer from "../../public/focus_timer.png";
 import profilepic from "../../public/ty_profile_pic.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
-import ipLocationMatching from "../../public/ip_location_matching.png";
+import roboFriends from "../../public/robo_friends.png";
 import {
   AiFillLinkedin,
   AiFillGithub,
@@ -310,46 +310,38 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  {/*  Project SimplyHired IP Location Matching Service  */}
+                  {/*  Project Robo Firends */}
                   <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
-                      src={ipLocationMatching}
+                      src={roboFriends}
                       className="w-full h-60 object-cover pointer-events-none"
                       alt="focus time app description"
                     />
                     <div className="px-6 py-4">
                       <div className="flex flex-row justify-between items-center mb-2">
                         <div className="font-bold text-xl mb-2 dark:text-gray-200">
-                          SimplyHired
+                          Robo Friends
                         </div>
                         <motion.a
                           className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
                           whileHover={{ scale: 1.2 }}
-                          href="https://www.simplyhired.com/"
+                          href="https://gitterence.github.io/robo-friends/"
                           target="_blank"
                         >
                           View
                         </motion.a>
                       </div>
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        IP-Location-Matching Service is an end-to-end feature I
-                        implemented for SimplyHired.com, to automatically fill
-                        the user&apos;s location in the search field by
-                        processing the IP address in the network request.
+                        A cute roobot friend contact list with a basic search
+                        functions. It's my first react project.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #Java
-                      </span>
-                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #Spring Boot
-                      </span>
-                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         #React
                       </span>
                       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                        #ChakraUI
+                        #Javascript
                       </span>
                     </div>
                   </motion.div>
