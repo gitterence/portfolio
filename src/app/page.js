@@ -332,8 +332,8 @@ export default function Home() {
                         </motion.a>
                       </div>
                       <p className="text-base text-gray-800 dark:text-gray-300">
-                        A cute roobot friend contact list with a basic search
-                        functions. It's my first react project.
+                        A cute robot friend contact list with a basic search
+                        function. It&apos;s actually my first react project.
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
