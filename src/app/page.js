@@ -378,7 +378,7 @@ export default function Home() {
                 way.
               </p>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-                May today mark the beginning of our remarkable journey.
+                May today mark the start of our incredible journey.
               </p>
             </div>
           </section>
