@@ -38,6 +38,7 @@ export default function Home() {
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-30 dark:bg-gray-800">
         <motion.div
+          className="max-w-screen-lg m-auto"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -128,7 +129,7 @@ export default function Home() {
                 , where I design products and develop features that connect
                 millions of people with new career opportunities every day. With
                 over{" "}
-                <span className="text-teal-500">4+ years of experience</span>,
+                <span className="text-teal-500">5+ years of experience</span>,
                 I&apos;ve had the privilege of building software with{" "}
                 <span className="text-teal-500">Full-Stack Skills</span> for
                 companies from start-ups to tech corporations. I&apos;m
@@ -216,7 +217,7 @@ export default function Home() {
                   dragConstraints={{ right: 0, left: -width }}
                 >
                   {/*  Project Focus Time  */}
-                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
                       src={focusTimer}
                       className="w-full h-60 object-cover pointer-events-none"
@@ -258,7 +259,7 @@ export default function Home() {
                   </motion.div>
 
                   {/*  Project Portfolio  */}
-                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     {darkMode ? (
                       <Image
                         src={brightPortfolio}
@@ -278,14 +279,6 @@ export default function Home() {
                         <div className="font-bold text-xl mb-2 dark:text-gray-200">
                           This Portfolio
                         </div>
-                        <motion.a
-                          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
-                          whileHover={{ scale: 1.2 }}
-                          href="#"
-                          target="_blank"
-                        >
-                          View
-                        </motion.a>
                       </div>
 
                       <p className="text-base text-gray-800 dark:text-gray-300">
@@ -311,7 +304,7 @@ export default function Home() {
                   </motion.div>
 
                   {/*  Project Robo Firends */}
-                  <motion.div className="min-w-18 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
                       src={roboFriends}
                       className="w-full h-60 object-cover pointer-events-none"
