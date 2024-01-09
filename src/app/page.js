@@ -152,7 +152,7 @@ export default function Home() {
             {/*  Cards  */}
             <div className="lg:flex gap-10 lg:justify-center">
               {/*  Card FE  */}
-              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="min-w-80 max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Frontend Implementation
                 </h3>
@@ -168,7 +168,7 @@ export default function Home() {
               </div>
 
               {/*  Card BE  */}
-              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="min-w-80 max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Backend Development
                 </h3>
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
 
               {/*  Card Infra  */}
-              <div className="max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
+              <div className="min-w-80 max-w-sm bg-gray-50/25 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-200">
                   Infrastructure
                 </h3>
@@ -217,7 +217,7 @@ export default function Home() {
                   dragConstraints={{ right: 0, left: -width }}
                 >
                   {/*  Project Focus Time  */}
-                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-72 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
                       src={focusTimer}
                       className="w-full h-60 object-cover pointer-events-none"
@@ -259,7 +259,7 @@ export default function Home() {
                   </motion.div>
 
                   {/*  Project Portfolio  */}
-                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-72 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     {darkMode ? (
                       <Image
                         src={brightPortfolio}
@@ -304,7 +304,7 @@ export default function Home() {
                   </motion.div>
 
                   {/*  Project Robo Firends */}
-                  <motion.div className="min-w-18 max-w-sm min-w-72 m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
+                  <motion.div className="min-w-72 max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700">
                     <Image
                       src={roboFriends}
                       className="w-full h-60 object-cover pointer-events-none"
