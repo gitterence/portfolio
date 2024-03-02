@@ -361,14 +361,11 @@ export default function Home() {
                 <span className="text-teal-500">
                   A journey of a thousand miles begins with a single step
                 </span>
-                .&quot; While the path ahead may appear daunting and seemingly
-                endless, I firmly believe that each of us possesses the
-                capability to navigate it one step at a time. Let us embrace the
-                notion that progress is achieved through steady momentum. As we
-                navigate this path, we may encounter obstacles and
-                uncertainties, but by remaining determined and focused on the
-                present moment, we can overcome any challenge that comes our
-                way.
+                .&quot; While the odyssey ahead may appear daunting and seemingly endless, 
+                I firmly believe that each of us possesses the capability to proceed one step at a time, 
+                and that progress is attained through steady momentum. As we navigate this route, 
+                we may encounter numerous obstacles and uncertainties, but by maintaining determination 
+                and focusing on the present moment, we can overcome any challenge that crosses our path.
               </p>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
                 May today mark the beginning of our incredible journey.
