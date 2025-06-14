@@ -4,17 +4,17 @@ const skillCards = [
   {
     title: "Frontend Implementation",
     description: "Turning designs into actual user interface",
-    skills: ["React", "Angular", "Javascript", "Typescript", "HTML & CSS"],
+    skills: ["React", "NodeJS", "JavaScript", "TypeScript", "HTML & CSS"],
   },
   {
     title: "Backend Development",
     description: "Developing projects and services from the ground up",
     skills: [
-      "Java, Python, C#",
-      "Spring",
-      "GraphQL",
-      "Restful API",
-      "SQL Relational Database",
+      "Python, Java",
+      "Flask, Spring",
+      "RESTful, GRPC, Protobuf",
+      "SQL Relational Databases",
+      "Data Structure & Algorithms",
     ],
   },
   {
@@ -41,7 +41,7 @@ export default function Skills() {
           </a>
           , where I design products and develop features that connect millions of
           people with new career opportunities every day. With over{" "}
-          <span className="text-teal-500">5+ years of experience</span>, I&apos;ve
+          <span className="text-teal-500">6+ years of experience</span>, I&apos;ve
           had the privilege of building software with{" "}
           <span className="text-teal-500">Full-Stack Skills</span> for companies
           from start-ups to tech corporations. I&apos;m constantly driven to
