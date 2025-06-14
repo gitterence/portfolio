@@ -22,4 +22,4 @@ export default function Navbar({ darkMode, setDarkMode }) {
       </ul>
     </nav>
   );
-} 
+}

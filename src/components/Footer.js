@@ -6,8 +6,8 @@ export default function Footer() {
       <hr className="mt-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="flex items-center justify-end text-gray-800 dark:text-gray-300">
         <AiFillCopyrightCircle className="mr-1" />
-        <p className="text-sm py-1 leading-8"> 2025 Ye. All Rights Reserved.</p>
+        <p className="text-sm py-1 leading-8"> 2023 - 2025 Ye. All Rights Reserved.</p>
       </div>
     </section>
   );
-} 
+}
