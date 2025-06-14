@@ -27,7 +27,7 @@ export default function Hero() {
             Engineer and Designer
           </h3>
           <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-400">
-            Creating software to help people reach their goals
+            Software with purpose — designed for impact, engineered for performance.
           </p>
         </div>
       </motion.div>
