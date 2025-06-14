@@ -8,6 +8,7 @@ const nextConfig = {
   output: isProd ? "export" : "standalone",
 
   // Note: Image Optimization using the default loader is not compatible with `{ output: 'export' }`.
+  // If using `next/image`, it might need to unoptimize images for static export
   // Read more: https://nextjs.org/docs/messages/export-image-api
   images: { unoptimized: true },
 };
