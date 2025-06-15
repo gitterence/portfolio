@@ -9,7 +9,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="mb-16">
+    <div className="mb-16">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}
@@ -63,6 +63,6 @@ export default function Hero() {
           />
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

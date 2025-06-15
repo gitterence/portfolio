@@ -38,7 +38,7 @@ const viewButtonStyles = "bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-
 
 export default function Projects({ darkMode }) {
   return (
-    <section>
+    <div>
       <h3 className="text-2xl font-semibold py-1 mb-5 dark:text-gray-200">
         Personal Projects
       </h3>
@@ -82,6 +82,6 @@ export default function Projects({ darkMode }) {
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

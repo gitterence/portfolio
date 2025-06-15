@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Quote from "../components/Quote";
@@ -27,6 +28,7 @@ export default function Home() {
         >
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero />
+          <AboutMe />
           <Skills />
           <Projects darkMode={darkMode} />
           <Quote />
