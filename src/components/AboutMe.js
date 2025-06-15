@@ -28,7 +28,7 @@ export default function AboutMe() {
         </p>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
           My passion centers on creating innovative solutions and delivering exceptional user experiences. 
-          This translates directly into my daily work, where I thrive in dynamic environments where ideas are shared and refined. 
+          This translates directly into my daily work, in which I thrive in dynamic environments where ideas are shared and refined. 
           I genuinely value contributing alongside talented teams from ideation to launch, 
           continually developing my skills as a well-rounded professional.
         </p>
