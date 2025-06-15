@@ -43,10 +43,10 @@ export default function Skills() {
             </a>
             , where I design products and develop features that connect millions of
             people with new career opportunities every day. With over{" "}
-            <span className="text-teal-500 font-medium">6+ years of experience</span>, I&apos;ve
+            <span className="text-teal-500 font-medium">6+ Years Of Experience</span>, I&apos;ve
             had the privilege of building software with{" "}
-            <span className="text-teal-500 font-medium">Full-Stack Skills</span> for companies
-            from start-ups to tech corporations. I&apos;m constantly driven to
+            <span className="text-teal-500 font-medium">Full Stack Skills</span> for companies
+            from startups to tech corporations. I&apos;m constantly driven to
             enhance my abilities and become a well-rounded professional.
           </p>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">

@@ -2,7 +2,7 @@ export default function Quote() {
   return (
     <section>
       <div className="mt-5 pb-5">
-        <h3 className="text-xl py-1 dark:text-gray-200">Lastly</h3>
+        <h3 className="text-2xl font-semibold py-1 mb-5 dark:text-gray-200">Lastly</h3>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
           Allow me to share a meaningful quote from Lao Tzu: &quot;
           <span className="text-teal-500">
