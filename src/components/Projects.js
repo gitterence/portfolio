@@ -12,7 +12,7 @@ const projects = [
     title: "Focus Time",
     image: focusTimer,
     imageForBrightMode: focusTimer,
-    description: "A minimalist Pomodoro timer that helps you stay focused and boost productivity.",
+    description: "A minimalist timer with Pomodoro method that helps you stay focused and boost productivity.",
     tags: ["React", "Javascript", "CSS"],
     link: "https://gitterence.github.io/focus-time/",
   },
