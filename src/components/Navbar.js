@@ -1,9 +1,13 @@
 import { motion, useTime, useTransform } from "framer-motion";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
+// Animation Constants
+const SUN_ROTATION_DURATION = 4000;
+const MOON_ANIMATION_DURATION = 3;
+
 export default function Navbar({ darkMode, setDarkMode }) {
   const time = useTime();
-  const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
+  const rotate = useTransform(time, [0, SUN_ROTATION_DURATION], [0, 360], { clamp: false });
 
   return (
     <nav className="py-10 mb-3 flex justify-between items-center">
@@ -26,8 +30,16 @@ export default function Navbar({ darkMode, setDarkMode }) {
             </motion.div>
           ) : (
             <motion.div 
-              style={{ rotate }}
               className="relative z-10 p-2 rounded-full hover:bg-gray-100/50 transition-colors duration-300 flex items-center justify-center"
+              animate={{
+                y: [0, -3, 0],
+                opacity: [0.8, 1, 0.8],
+              }}
+              transition={{
+                duration: MOON_ANIMATION_DURATION,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
               <BsFillMoonStarsFill
                 className="cursor-pointer text-2xl text-gray-700 hover:text-gray-600 transition-colors duration-300"
