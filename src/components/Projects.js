@@ -1,7 +1,4 @@
-import { useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import focusTimer from "../../public/focus_timer.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
@@ -11,21 +8,24 @@ const projects = [
   {
     title: "Focus Time",
     image: focusTimer,
+    imageForBrightMode: focusTimer,
     description:
-      "A timer app that helps you to focus on a task via the Pomodoro method. React hooks like useState, useEffect, useContext, etc., are implemented to support countdown function and other settings.",
+      "A timer app that helps you to focus on a task via the Pomodoro method.",
     tags: ["React", "Javascript", "CSS"],
     link: "https://gitterence.github.io/focus-time/",
   },
   {
     title: "This Portfolio",
-    image: null, // Will be handled separately due to dark mode
+    image: brightPortfolio,
+    imageForBrightMode: darkPortfolio,
     description:
-      "A cool portfolio page for myself. Libraries such as Tailwind and Framer Motion are utilized to build a modern and visual appealing web page.",
+      "A cool portfolio page for myself. Libraries such as Tailwind and Framer Motion are utilized.",
     tags: ["React", "Tailwind", "NextJS", "FramerMotion"],
   },
   {
     title: "Robo Friends",
     image: roboFriends,
+    imageForBrightMode: roboFriends,
     description:
       "A cute robot friend contact list with a basic search function. It's actually my first react project.",
     tags: ["React", "Javascript"],
@@ -34,97 +34,45 @@ const projects = [
 ];
 
 export default function Projects({ darkMode }) {
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
   return (
     <section>
-      <h3 className="text-xl py-1 mb-5 dark:text-gray-200">Projects</h3>
-      <div className="flex justify-center">
-        <motion.div
-          className="cursor-grab overflow-hidden"
-          ref={carousel}
-          whileTap={{ cursor: "grabbing" }}
-        >
-          <motion.div
-            className="flex"
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-          >
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                className="max-w-sm m-5 rounded-xl overflow-hidden shadow-lg dark:bg-gray-700"
-                style={{ minWidth: "320px" }}
-              >
-                {project.title === "This Portfolio" ? (
-                  darkMode ? (
-                    <Image
-                      src={brightPortfolio}
-                      className="w-full h-60 object-cover pointer-events-none"
-                      alt="dark portfolio"
-                    />
-                  ) : (
-                    <Image
-                      src={darkPortfolio}
-                      className="w-full h-60 object-cover pointer-events-none"
-                      alt="bright portfolio"
-                    />
-                  )
-                ) : (
-                  <Image
-                    src={project.image}
-                    className="w-full h-60 object-cover pointer-events-none"
-                    alt={`${project.title} description`}
-                  />
-                )}
-                <div className="px-6 py-4">
-                  <div className="flex flex-row justify-between items-center mb-2">
-                    <div className="font-bold text-xl mb-2 dark:text-gray-200">
-                      {project.title}
-                    </div>
-                    {project.link && (
-                      <motion.a
-                        className="bg-gradient-to-r from-cyan-500 to-teal-500 text-sm font-semibold text-white px-2 py-1 rounded-xl"
-                        whileHover={{ scale: 1.2 }}
-                        href={project.link}
-                        target="_blank"
-                      >
-                        View
-                      </motion.a>
-                    )}
-                  </div>
-                  <p className="text-base text-gray-800 dark:text-gray-300">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+      <h3 className="text-xl py-1 mb-5 dark:text-gray-200">Personal Projects</h3>
+      <div className="w-full">
+        <ul role="list" className="divide-y divide-gray-100">
+        {projects.map((project) => (
+          <li key={project.title} className="flex justify-between gap-x-6 py-5">
+            <div className="flex min-w-0 gap-x-4">
+              <div className="relative size-16 flex-none rounded-full bg-gray-50 dark:bg-gray-800 overflow-hidden">
+                <Image
+                  src={darkMode ? project.image : project.imageForBrightMode}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              </div>
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">{project.title}</p>
+                <p className="mt-1 truncate text-sm/6 text-gray-500 dark:text-gray-400">{project.description}</p>
+              </div>
+            </div>
+            <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
+              {project.link ? (
+                <a 
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-cyan-500 hover:bg-cyan-700 text-white text-xs font-bold py-1 px-3 rounded-full">
+                    View
+                  </button>
+                </a>
+              ) : null}
+            </div>
+          </li>
+        ))}
+        </ul>
       </div>
-      <motion.div
-        className="flex items-center justify-center text-md py-1 mb-5 dark:text-gray-200"
-        animate={{ x: [0, 15, 15, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <p className="mr-3 font-mono">Swipe</p>
-        <BsFillArrowRightCircleFill className="text-xl" />
-      </motion.div>
     </section>
   );
 }
