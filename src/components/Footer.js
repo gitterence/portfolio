@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex justify-end">
         <div className="flex items-center text-gray-800 dark:text-gray-300">
           <AiFillCopyrightCircle className="mr-1" />
-          <p className="text-sm py-1 leading-8">2023 - 2025 Ye. All Rights Reserved.</p>
+          <p className="text-sm py-1 leading-8">2023 - 2025 Terence Ye.</p>
         </div>
       </div>
     </section>
