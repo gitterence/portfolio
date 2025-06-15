@@ -39,15 +39,29 @@ export default function Hero() {
           alt="profile-pic"
         />
       </div>
-      <div className="text-4xl flex justify-center gap-16 py-3 text-gray-600">
-        <AiFillLinkedin
-          className="cursor-pointer"
-          onClick={() => openInNewTab("https://www.linkedin.com/in/terence-ye")}
-        />
-        <AiFillGithub
-          className="cursor-pointer"
-          onClick={() => openInNewTab("https://github.com/gitterence")}
-        />
+      <div className="text-4xl flex justify-center gap-16 py-3">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="relative group"
+        >
+          <div className="absolute inset-0 rounded-full bg-gray-200/50 dark:bg-gray-700/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <AiFillLinkedin
+            className="cursor-pointer text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300 relative z-10"
+            onClick={() => openInNewTab("https://www.linkedin.com/in/terence-ye")}
+          />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="relative group"
+        >
+          <div className="absolute inset-0 rounded-full bg-gray-200/50 dark:bg-gray-700/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <AiFillGithub
+            className="cursor-pointer text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300 relative z-10"
+            onClick={() => openInNewTab("https://github.com/gitterence")}
+          />
+        </motion.div>
       </div>
     </section>
   );

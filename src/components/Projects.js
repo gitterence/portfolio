@@ -63,7 +63,7 @@ export default function Projects({ darkMode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-cyan-500 hover:bg-cyan-700 text-white text-xs font-bold py-1 px-3 rounded-full">
+                  <button className="bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white text-xs font-bold py-1.5 px-4 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:active:bg-gray-700">
                     View
                   </button>
                 </a>
