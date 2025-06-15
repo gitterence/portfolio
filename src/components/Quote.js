@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+
 export default function Quote() {
   return (
     <section>
@@ -18,6 +21,24 @@ export default function Quote() {
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
           May today mark the beginning of our incredible journey.
         </p>
+      </div>
+
+      <div className="flex justify-center">
+        <motion.div
+          className="flex items-center text-md py-2 px-4 dark:text-gray-200 cursor-pointer mt-3 rounded-full bg-gray-50/50 hover:bg-gray-100/50 dark:bg-gray-700/50 dark:hover:bg-gray-600/50 transition-colors duration-300"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ 
+            repeat: Infinity, 
+            duration: 2,
+            ease: "easeInOut"
+          }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <BsFillArrowUpCircleFill className="text-xl mr-2 text-teal-500" />
+          <p className="font-mono text-gray-600 dark:text-gray-300">Back to Top</p>
+        </motion.div>
       </div>
     </section>
   );

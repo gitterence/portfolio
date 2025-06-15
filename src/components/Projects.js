@@ -10,7 +10,7 @@ const projects = [
     image: focusTimer,
     imageForBrightMode: focusTimer,
     description:
-      "A timer app that helps you to focus on a task via the Pomodoro method.",
+      "A minimalist Pomodoro timer that helps you stay focused and boost productivity.",
     tags: ["React", "Javascript", "CSS"],
     link: "https://gitterence.github.io/focus-time/",
   },
@@ -19,7 +19,7 @@ const projects = [
     image: brightPortfolio,
     imageForBrightMode: darkPortfolio,
     description:
-      "A cool portfolio page for myself. Libraries such as Tailwind and Framer Motion are utilized.",
+      "A modern, responsive portfolio utilizing libraries like React,Tailwind and Framer Motion.",
     tags: ["React", "Tailwind", "NextJS", "FramerMotion"],
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     image: roboFriends,
     imageForBrightMode: roboFriends,
     description:
-      "A cute robot friend contact list with a basic search function. It's actually my first react project.",
+      "A cute robot friend contact list with a basic search function.",
     tags: ["React", "Javascript"],
     link: "https://gitterence.github.io/robo-friends/",
   },
