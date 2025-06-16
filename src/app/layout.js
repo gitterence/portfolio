@@ -4,8 +4,13 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Terence Ye",
-  description: "The portfolio for my software development journey",
+  title: "Terence Ye - Software Engineer",
+  description: "Software Engineer with 6+ years of experience in software development.",
+  openGraph: {
+    title: "Terence Ye - Software Engineer",
+    description: "Software Engineer with 6+ years of experience in software development.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
