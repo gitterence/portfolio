@@ -4,23 +4,22 @@ const skillCards = [
   {
     title: "Frontend Implementation",
     description: "Turning designs into actual user interface",
-    skills: ["React", "NodeJS", "JavaScript", "TypeScript", "HTML & CSS"],
+    skills: ["JavaScript", "TypeScript", "React, NextJS", "Tailwind CSS, Chakra UI",],
   },
   {
     title: "Backend Development",
     description: "Developing projects and services from the ground up",
     skills: [
       "Python, Java",
-      "Flask, Spring",
+      "Flask, NodeJS, Spring",
       "RESTful, GRPC, Protobuf",
       "SQL Relational Databases",
-      "Data Structure & Algorithms",
     ],
   },
   {
     title: "Infrastructure",
     description: "Building the foundation that supports any systems",
-    skills: ["AWS", "Script", "Docker", "Terraform", "GitLab CI/CD"],
+    skills: ["AWS", "Docker", "Terraform", "GitLab CI/CD",],
   },
 ];
 
