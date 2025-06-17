@@ -27,11 +27,11 @@ export default function Skills() {
   return (
     <div>
       <h3 className="text-2xl font-semibold py-1 dark:text-gray-200">Skills</h3>
-      <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-10">
+      <div className="px-4 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10 justify-items-center">
         {skillCards.map((card, index) => (
           <motion.div
             key={index}
-            className="max-w-sm bg-gradient-to-br from-gray-50 to-gray-100 text-center shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] p-10 rounded-xl my-10 border border-gray-200 transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:from-gray-700 dark:to-gray-800 dark:hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.3)] dark:hover:border-gray-500"
+            className="w-full max-w-xs bg-gradient-to-br from-gray-50 to-gray-100 text-center shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] p-10 rounded-xl my-4 sm:my-6 lg:my-10 border border-gray-200 transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:from-gray-700 dark:to-gray-800 dark:hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.3)] dark:hover:border-gray-500"
             style={{ minWidth: "320px" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
