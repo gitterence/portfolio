@@ -25,7 +25,7 @@ const skillCards = [
 
 export default function Skills() {
   return (
-    <div>
+    <div className="mb-6">
       <h3 className="text-2xl font-semibold py-1 dark:text-gray-200">Skills</h3>
       <div className="px-4 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10 justify-items-center">
         {skillCards.map((card, index) => (
