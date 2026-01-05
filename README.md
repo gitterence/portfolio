@@ -9,7 +9,7 @@ Verify Node and Node package manager versions:
 nvm install
 nvm use
 
-node -v; 
+node -v 
 npm -v 
 ```
 
