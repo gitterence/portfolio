@@ -6,7 +6,11 @@
 
 Verify Node and Node package manager versions:
 ```bash
-node -v; npm -v 
+nvm install
+nvm use
+
+node -v; 
+npm -v 
 ```
 
 Install dependencies: 
