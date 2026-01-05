@@ -5,9 +5,18 @@ import focusTimer from "../../public/focus_timer.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
 import roboFriends from "../../public/robo_friends.png";
+import todoList from "../../public/todo-list-example.png";
 
 // Project Data
 const projects = [
+  {
+    title: "To-Do List",
+    image: todoList,
+    imageForBrightMode: todoList,
+    description: "A simple to-do list application.",
+    tags: ["React", "Javascript", "Tailwind"],
+    link: "https://gitterence.github.io/to-do-list/",
+  },
   {
     title: "Focus Time",
     image: focusTimer,
@@ -67,7 +76,7 @@ export default function Projects({ darkMode }) {
               </div>
               <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
                 {project.link && (
-                  <a 
+                  <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
