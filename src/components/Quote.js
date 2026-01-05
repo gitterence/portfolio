@@ -11,7 +11,7 @@ export default function Quote() {
           <span className="text-teal-500">
             A journey of a thousand miles begins with a single step
           </span>
-          &quot; is a guiding principle for me, inspired by Lao Tzu. 
+          &quot;, by Lao Tzu, is a guiding principle for me.
           While the odyssey ahead may appear daunting and seemingly endless,
           I firmly believe that each of us possesses the capability to proceed one
           step at a time, and that progress is attained through steady momentum. As
@@ -28,8 +28,8 @@ export default function Quote() {
         <motion.div
           className="flex items-center text-md py-2 px-4 dark:text-gray-200 cursor-pointer mt-3 rounded-full bg-gray-50/50 hover:bg-gray-100/50 dark:bg-gray-700/50 dark:hover:bg-gray-600/50 transition-colors duration-300"
           animate={{ y: [0, -10, 0] }}
-          transition={{ 
-            repeat: Infinity, 
+          transition={{
+            repeat: Infinity,
             duration: 2,
             ease: "easeInOut"
           }}
