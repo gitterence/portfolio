@@ -5,7 +5,7 @@ import focusTimer from "../../public/focus_timer.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
 import roboFriends from "../../public/robo_friends.png";
-import todoList from "../../public/todo-list-example.png";
+import todoList from "../../public/todo_list_example.png";
 
 // Project Data
 const projects = [
