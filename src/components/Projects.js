@@ -6,9 +6,19 @@ import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
 import roboFriends from "../../public/robo_friends.png";
 import todoList from "../../public/todo_list_example.png";
+import skyLite from "../../public/sky-lite.png";
 
 // Project Data
 const projects = [
+  {
+    title: "Sky Lite",
+    image: skyLite,
+    imageForBrightMode: skyLite,
+    description:
+      "A minimal weather app with city search, location-based forecasts, and a relaxed responsive interface.",
+    tags: ["React", "Vite", "Tailwind", "OpenWeather"],
+    link: "https://gitterence.github.io/weather/",
+  },
   {
     title: "To-Do List",
     image: todoList,
