@@ -64,8 +64,8 @@ export default function Projects({ darkMode }) {
       <div className="w-full">
         <ul role="list" className="divide-y divide-zinc-200/80 dark:divide-zinc-700">
           {projects.map((project) => (
-            <li key={project.title} className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-x-6">
-              <div className="flex min-w-0 gap-x-4">
+            <li key={project.title} className="flex items-center justify-between gap-x-4 py-5 sm:gap-x-6">
+              <div className="flex min-w-0 flex-1 gap-x-4">
                 <div className="relative size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800">
                   <Image
                     src={darkMode ? project.image : project.imageForBrightMode}
@@ -84,7 +84,7 @@ export default function Projects({ darkMode }) {
                   </p>
                 </div>
               </div>
-              <div className="shrink-0 pl-20 sm:flex sm:flex-col sm:items-end sm:pl-0">
+              <div className="flex min-w-14 shrink-0 justify-end">
                 {project.link && (
                   <a
                     className={viewLinkStyles}

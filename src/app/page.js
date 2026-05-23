@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
@@ -27,7 +26,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let themeColor = document.querySelector('meta[name="theme-color"]');
+    const themeColorValue = darkMode ? themeColors.dark : themeColors.light;
+    const themeColorTags = document.querySelectorAll('meta[name="theme-color"]');
+    let themeColor = themeColorTags[0];
 
     if (!themeColor) {
       themeColor = document.createElement("meta");
@@ -35,25 +36,21 @@ export default function Home() {
       document.head.appendChild(themeColor);
     }
 
-    themeColor.setAttribute(
-      "content",
-      darkMode ? themeColors.dark : themeColors.light
-    );
+    themeColor.removeAttribute("media");
+    themeColor.setAttribute("content", themeColorValue);
+    themeColorTags.forEach((tag, index) => {
+      if (index > 0) {
+        tag.remove();
+      }
+    });
+    document.documentElement.style.setProperty("--app-bg", themeColorValue);
+    document.documentElement.style.colorScheme = darkMode ? "dark" : "light";
   }, [darkMode]);
 
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="min-h-screen bg-[#F7F5F0] px-5 text-zinc-900 sm:px-8 md:px-16 lg:px-20 dark:bg-[#202124] dark:text-zinc-100">
-        <motion.div
-          className="m-auto max-w-screen-lg"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
+        <div className="m-auto max-w-screen-lg">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero />
           <AboutMe />
@@ -61,7 +58,7 @@ export default function Home() {
           <Projects darkMode={darkMode} />
           <Quote />
           <Footer />
-        </motion.div>
+        </div>
       </main>
     </div>
   );
