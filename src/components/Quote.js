@@ -11,7 +11,7 @@ export default function Quote() {
           <span className="font-medium text-zinc-900 dark:text-zinc-100">
             A journey of a thousand miles begins with a single step
           </span>
-          &quot;, by Lao Tzu, is a guiding principle for me.
+          &quot; has always been a guiding principle for me.
           While the odyssey ahead may appear daunting and seemingly endless,
           I firmly believe that each of us possesses the capability to proceed one
           step at a time, and that progress is attained through steady momentum. As
