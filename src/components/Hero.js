@@ -4,10 +4,6 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import profilepic from "../../public/ty_profile_pic.png";
 
 export default function Hero() {
-  const openInNewTab = (url) => {
-    window.open(url, "_blank", "noreferrer");
-  };
-
   return (
     <div className="mb-14 md:mb-16">
       <motion.div
@@ -26,7 +22,7 @@ export default function Hero() {
             Engineer and Designer
           </h3>
           <p className="text-md mx-auto max-w-lg py-5 leading-8 text-zinc-600 md:text-xl dark:text-zinc-400">
-            Build software with purpose — designed for impact, engineered for performance.
+            Building practical software with thoughtful design and reliable engineering.
           </p>
         </div>
       </motion.div>
@@ -39,7 +35,11 @@ export default function Hero() {
         />
       </div>
       <div className="flex justify-center gap-16 py-3 text-4xl">
-        <motion.div
+        <motion.a
+          href="https://www.linkedin.com/in/terence-ye"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Terence Ye's LinkedIn profile"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="relative group"
@@ -47,10 +47,13 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           <AiFillLinkedin
             className="relative z-10 cursor-pointer text-zinc-600 transition-colors duration-300 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-            onClick={() => openInNewTab("https://www.linkedin.com/in/terence-ye")}
           />
-        </motion.div>
-        <motion.div
+        </motion.a>
+        <motion.a
+          href="https://github.com/gitterence"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Terence Ye's GitHub profile"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="relative group"
@@ -58,9 +61,8 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           <AiFillGithub
             className="relative z-10 cursor-pointer text-zinc-600 transition-colors duration-300 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-            onClick={() => openInNewTab("https://github.com/gitterence")}
           />
-        </motion.div>
+        </motion.a>
       </div>
     </div>
   );

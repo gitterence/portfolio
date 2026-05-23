@@ -19,17 +19,22 @@ export default function Navbar({ darkMode, setDarkMode }) {
         >
           <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           {darkMode ? (
-            <motion.div 
+            <motion.button
+              type="button"
+              aria-label="Switch to light mode"
+              onClick={() => setDarkMode(false)}
               style={{ rotate }}
               className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-700/60"
             >
               <BsFillSunFill
-                className="cursor-pointer text-2xl text-yellow-300 hover:text-yellow-200 transition-colors duration-300"
-                onClick={() => setDarkMode(false)}
+                className="text-2xl text-yellow-300 transition-colors duration-300 hover:text-yellow-200"
               />
-            </motion.div>
+            </motion.button>
           ) : (
-            <motion.div 
+            <motion.button
+              type="button"
+              aria-label="Switch to dark mode"
+              onClick={() => setDarkMode(true)}
               className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-200/70"
               animate={{
                 y: [0, -3, 0],
@@ -42,10 +47,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
               }}
             >
               <BsFillMoonStarsFill
-                className="cursor-pointer text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
-                onClick={() => setDarkMode(true)}
+                className="text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
               />
-            </motion.div>
+            </motion.button>
           )}
         </motion.li>
       </ul>

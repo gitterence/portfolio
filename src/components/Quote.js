@@ -8,7 +8,7 @@ export default function Quote() {
         <h3 className="mb-5 py-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Lastly</h3>
         <p className="text-md py-2 leading-8 text-zinc-700 dark:text-zinc-300">
           &quot;
-          <span className="text-teal-700 dark:text-teal-400">
+          <span className="font-medium text-zinc-900 dark:text-zinc-100">
             A journey of a thousand miles begins with a single step
           </span>
           &quot;, by Lao Tzu, is a guiding principle for me.
@@ -25,8 +25,9 @@ export default function Quote() {
       </div>
 
       <div className="flex justify-center">
-        <motion.div
-          className="text-md mt-3 flex cursor-pointer items-center rounded-full bg-[#FFFCF6]/80 px-4 py-2 text-zinc-700 transition-colors duration-300 hover:bg-white dark:bg-zinc-800/70 dark:text-zinc-200 dark:hover:bg-zinc-700/80"
+        <motion.button
+          type="button"
+          className="text-md mt-3 flex cursor-pointer items-center rounded-full bg-[#FFFCF6]/80 px-4 py-2 text-zinc-700 transition-colors duration-300 hover:bg-white dark:bg-[#2B2C30] dark:text-zinc-200 dark:hover:bg-zinc-700/80"
           animate={{ y: [0, -10, 0] }}
           transition={{
             repeat: Infinity,
@@ -38,8 +39,8 @@ export default function Quote() {
           whileTap={{ scale: 0.95 }}
         >
           <BsFillArrowUpCircleFill className="mr-2 text-xl text-teal-700 dark:text-teal-400" />
-          <p className="font-mono">Back to Top</p>
-        </motion.div>
+          <span className="font-mono">Back to Top</span>
+        </motion.button>
       </div>
     </div>
   );

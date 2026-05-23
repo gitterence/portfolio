@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="min-h-screen bg-[#F7F5F0] px-5 text-zinc-900 sm:px-8 md:px-16 lg:px-20 dark:bg-[#18181B] dark:text-zinc-100">
+      <main className="min-h-screen bg-[#F7F5F0] px-5 text-zinc-900 sm:px-8 md:px-16 lg:px-20 dark:bg-[#202124] dark:text-zinc-100">
         <motion.div
           className="m-auto max-w-screen-lg"
           initial={{ opacity: 0, scale: 0.5 }}
