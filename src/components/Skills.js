@@ -26,25 +26,24 @@ const skillCards = [
 export default function Skills() {
   return (
     <div className="mb-6">
-      <h3 className="text-2xl font-semibold py-1 dark:text-gray-200">Skills</h3>
-      <div className="px-4 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10 justify-items-center">
+      <h3 className="py-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Skills</h3>
+      <div className="grid grid-cols-1 justify-items-center gap-4 md:gap-8 lg:grid-cols-3 lg:gap-8">
         {skillCards.map((card, index) => (
           <motion.div
             key={index}
-            className="w-full max-w-xs bg-gradient-to-br from-gray-50 to-gray-100 text-center shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] p-10 rounded-xl my-4 sm:my-6 lg:my-10 border border-gray-200 transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:from-gray-700 dark:to-gray-800 dark:hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.3)] dark:hover:border-gray-500"
-            style={{ minWidth: "320px" }}
+            className="my-4 w-full max-w-sm rounded-lg border border-zinc-200 bg-[#FFFCF6] p-7 text-center shadow-sm transition-colors duration-300 sm:my-6 lg:my-10 dark:border-zinc-700 dark:bg-[#242428]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
           >
-            <h3 className="text-lg font-medium pt-8 pb-2 text-gray-800 dark:text-gray-200">
+            <h3 className="pb-2 pt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
               {card.title}
             </h3>
-            <p className="text-gray-600 py-2 dark:text-gray-300">
+            <p className="py-2 text-zinc-600 dark:text-zinc-400">
               {card.description}
             </p>
             {card.skills.map((skill, skillIndex) => (
-              <p key={skillIndex} className="py-1 text-teal-600 font-medium dark:text-teal-400">
+              <p key={skillIndex} className="py-1 font-medium text-teal-700 dark:text-teal-400">
                 {skill}
               </p>
             ))}

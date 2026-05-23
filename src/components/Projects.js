@@ -53,20 +53,20 @@ const projects = [
 ];
 
 // Button Styles
-const viewButtonStyles = "bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white text-xs font-bold py-1.5 px-4 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:active:bg-gray-700";
+const viewButtonStyles = "rounded-full bg-zinc-800 px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 ease-in-out hover:bg-zinc-700 active:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-teal-600/30 dark:bg-zinc-200 dark:text-zinc-900 dark:hover:bg-white";
 
 export default function Projects({ darkMode }) {
   return (
     <div className="mb-10">
-      <h3 className="text-2xl font-semibold py-1 mb-5 dark:text-gray-200">
+      <h3 className="mb-5 py-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
         Personal Projects
       </h3>
       <div className="w-full">
-        <ul role="list" className="divide-y divide-gray-100">
+        <ul role="list" className="divide-y divide-zinc-200/80 dark:divide-zinc-700">
           {projects.map((project) => (
-            <li key={project.title} className="flex justify-between gap-x-6 py-5">
+            <li key={project.title} className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-x-6">
               <div className="flex min-w-0 gap-x-4">
-                <div className="relative size-16 flex-none rounded-full bg-gray-50 dark:bg-gray-800 overflow-hidden">
+                <div className="relative size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800">
                   <Image
                     src={darkMode ? project.image : project.imageForBrightMode}
                     alt={project.title}
@@ -76,15 +76,15 @@ export default function Projects({ darkMode }) {
                   />
                 </div>
                 <div className="min-w-0 flex-auto">
-                  <p className="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">
+                  <p className="text-sm/6 font-semibold text-zinc-900 dark:text-zinc-100">
                     {project.title}
                   </p>
-                  <p className="mt-1 truncate text-sm/6 text-gray-500 dark:text-gray-400">
+                  <p className="mt-1 text-sm/6 text-zinc-600 dark:text-zinc-400">
                     {project.description}
                   </p>
                 </div>
               </div>
-              <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
+              <div className="shrink-0 pl-20 sm:flex sm:flex-col sm:items-end sm:pl-0">
                 {project.link && (
                   <a
                     href={project.link}

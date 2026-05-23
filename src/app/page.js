@@ -15,9 +15,9 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-white px-10 md:px-20 lg:px-30 dark:bg-gray-800">
+      <main className="min-h-screen bg-[#F7F5F0] px-5 text-zinc-900 sm:px-8 md:px-16 lg:px-20 dark:bg-[#18181B] dark:text-zinc-100">
         <motion.div
-          className="max-w-screen-lg m-auto"
+          className="m-auto max-w-screen-lg"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{

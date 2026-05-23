@@ -10,18 +10,18 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const rotate = useTransform(time, [0, SUN_ROTATION_DURATION], [0, 360], { clamp: false });
 
   return (
-    <nav className="py-10 mb-3 flex justify-between items-center">
-      <h1 className="text-xl font-mono dark:text-gray-50">Portfolio</h1>
+    <nav className="mb-3 flex items-center justify-between py-8 md:py-10">
+      <h1 className="font-mono text-xl text-zinc-800 dark:text-zinc-100">Portfolio</h1>
       <ul className="flex items-center">
         <motion.li 
           whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
           className="group relative flex items-center"
         >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 dark:from-gray-800/20 dark:to-gray-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           {darkMode ? (
             <motion.div 
               style={{ rotate }}
-              className="relative z-10 p-2 rounded-full hover:bg-gray-800/50 transition-colors duration-300 flex items-center justify-center"
+              className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-700/60"
             >
               <BsFillSunFill
                 className="cursor-pointer text-2xl text-yellow-300 hover:text-yellow-200 transition-colors duration-300"
@@ -30,7 +30,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             </motion.div>
           ) : (
             <motion.div 
-              className="relative z-10 p-2 rounded-full hover:bg-gray-100/50 transition-colors duration-300 flex items-center justify-center"
+              className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-200/70"
               animate={{
                 y: [0, -3, 0],
                 opacity: [0.8, 1, 0.8],
@@ -42,7 +42,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
               }}
             >
               <BsFillMoonStarsFill
-                className="cursor-pointer text-2xl text-gray-700 hover:text-gray-600 transition-colors duration-300"
+                className="cursor-pointer text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
                 onClick={() => setDarkMode(true)}
               />
             </motion.div>
