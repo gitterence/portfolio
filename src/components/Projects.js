@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import focusTimer from "../../public/focus_timer.png";
-import darkPortfolio from "../../public/dark_portfolio.png";
 import brightPortfolio from "../../public/bright_portfolio.png";
+import darkPortfolio from "../../public/dark_portfolio.png";
+import focusTimer from "../../public/focus_timer.png";
 import roboFriends from "../../public/robo_friends.png";
-import todoList from "../../public/todo_list_example.png";
 import skyLite from "../../public/sky-lite.png";
+import todoList from "../../public/todo_list.png";
 
 const projects = [
   {
@@ -20,7 +20,7 @@ const projects = [
     title: "To-Do List",
     image: todoList,
     imageForBrightMode: todoList,
-    description: "A simple to-do list application.",
+    description: "A clean to-do list application with task management and an intuitive user interface.",
     link: "https://gitterence.github.io/to-do-list/",
   },
   {
