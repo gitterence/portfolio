@@ -3,21 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --app-bg: #f7f5f0;
   color-scheme: light dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --app-bg: #202124;
-  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background: var(--app-bg);
 }
 
 a {
