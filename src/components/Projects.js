@@ -1,4 +1,8 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import brightPortfolio from "../../public/bright_portfolio.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
@@ -47,7 +51,16 @@ const projects = [
 
 const viewLinkStyles = "inline-flex rounded-full bg-zinc-800 px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 ease-in-out hover:bg-zinc-700 active:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-teal-600/30 dark:bg-zinc-200 dark:text-zinc-900 dark:hover:bg-white";
 
-export default function Projects({ darkMode }) {
+export default function Projects() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDarkMode = theme === "dark" || (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   return (
     <div className="mb-10">
       <h3 className="mb-5 py-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
@@ -60,7 +73,7 @@ export default function Projects({ darkMode }) {
               <div className="flex min-w-0 flex-1 gap-x-4">
                 <div className="relative size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800">
                   <Image
-                    src={darkMode ? project.image : project.imageForBrightMode}
+                    src={mounted && isDarkMode ? project.image : project.imageForBrightMode}
                     alt={project.title}
                     fill
                     className="object-cover"
