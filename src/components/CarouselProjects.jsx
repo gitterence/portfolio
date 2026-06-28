@@ -2,10 +2,10 @@
 // import { motion } from "framer-motion";
 // import Image from "next/image";
 // import { BsFillArrowRightCircleFill } from "react-icons/bs";
-// import focusTimer from "../../public/focus_timer.png";
-// import darkPortfolio from "../../public/dark_portfolio.png";
-// import brightPortfolio from "../../public/bright_portfolio.png";
-// import roboFriends from "../../public/robo_friends.png";
+// import focusTimer from "../../public/focus_timer.webp";
+// import darkPortfolio from "../../public/dark_portfolio.webp";
+// import brightPortfolio from "../../public/bright_portfolio.webp";
+// import roboFriends from "../../public/robo_friends.webp";
 
 // const projects = [
 //   {

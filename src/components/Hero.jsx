@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import profilepic from "../../public/ty_profile_pic.png";
+import profilepic from "../../public/ty_profile_pic.webp";
 import TypewriterText from "./TypewriterText";
 
 export default function Hero() {

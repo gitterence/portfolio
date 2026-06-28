@@ -5,12 +5,12 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
-import brightPortfolio from "../../public/bright_portfolio.png";
-import darkPortfolio from "../../public/dark_portfolio.png";
-import focusTimer from "../../public/focus_timer.png";
-import roboFriends from "../../public/robo_friends.png";
-import skyLite from "../../public/sky-lite.png";
-import todoList from "../../public/todo_list.png";
+import brightPortfolio from "../../public/bright_portfolio.webp";
+import darkPortfolio from "../../public/dark_portfolio.webp";
+import focusTimer from "../../public/focus_timer.webp";
+import roboFriends from "../../public/robo_friends.webp";
+import skyLite from "../../public/sky-lite.webp";
+import todoList from "../../public/todo_list.webp";
 
 const projects = [
   {
