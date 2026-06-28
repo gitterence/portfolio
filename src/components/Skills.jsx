@@ -45,8 +45,9 @@ export default function Skills() {
             key={index}
             className="my-4 flex min-h-[300px] w-full max-w-none flex-col rounded-lg border border-zinc-200 bg-[#FFFCF6] p-6 shadow-sm transition-colors duration-300 sm:my-6 lg:my-10 lg:max-w-sm dark:border-zinc-700 dark:bg-[#2B2C30]"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: index * 0.15, duration: 0.5 }}
           >
             <div className="mb-5">
               <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">

@@ -10,7 +10,8 @@ export default function AboutMe() {
       <motion.div
         className="rounded-lg border border-zinc-200 bg-[#FFFCF6] p-5 shadow-sm transition-colors duration-300 md:p-8 dark:border-zinc-700 dark:bg-[#2B2C30]"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
       >
         <p className="text-md py-2 leading-8 text-zinc-700 dark:text-zinc-300">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 import brightPortfolio from "../../public/bright_portfolio.png";
 import darkPortfolio from "../../public/dark_portfolio.png";
@@ -68,8 +69,15 @@ export default function Projects() {
       </h3>
       <div className="w-full">
         <ul role="list" className="divide-y divide-zinc-200/80 dark:divide-zinc-700">
-          {projects.map((project) => (
-            <li key={project.title} className="flex items-center justify-between gap-x-4 py-5 sm:gap-x-6">
+          {projects.map((project, index) => (
+            <motion.li 
+              key={project.title} 
+              className="flex items-center justify-between gap-x-4 py-5 sm:gap-x-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
               <div className="flex min-w-0 flex-1 gap-x-4">
                 <div className="relative size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800">
                   <Image
@@ -101,7 +109,7 @@ export default function Projects() {
                   </a>
                 )}
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
