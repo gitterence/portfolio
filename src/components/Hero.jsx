@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import profilepic from "../../public/ty_profile_pic.png";
+import TypewriterText from "./TypewriterText";
 
 export default function Hero() {
   return (
@@ -20,12 +21,20 @@ export default function Hero() {
           <h2 className="py-2 text-4xl font-semibold text-teal-700 md:text-5xl dark:text-teal-400">
             Terence Ye
           </h2>
-          <h3 className="py-2 text-xl font-medium text-zinc-800 md:text-2xl dark:text-zinc-100">
-            Engineer and Designer
-          </h3>
-          <p className="text-md mx-auto max-w-lg py-5 leading-8 text-zinc-600 md:text-xl dark:text-zinc-400">
-            Building practical software with thoughtful design and reliable engineering.
-          </p>
+          <TypewriterText 
+            as="h3"
+            text="Engineer and Designer"
+            className="py-2 text-xl font-medium text-zinc-800 md:text-2xl dark:text-zinc-100"
+            delay={500}
+          />
+          <div className="min-h-[80px]">
+            <TypewriterText 
+              as="p"
+              text="Building practical software with thoughtful design and reliable engineering."
+              className="text-md mx-auto max-w-lg py-5 leading-8 text-zinc-600 md:text-xl dark:text-zinc-400"
+              delay={1600} // Wait for role to finish typing
+            />
+          </div>
         </div>
       </motion.div>
       <div className="relative mx-auto mb-6 mt-1 h-20 w-20 overflow-hidden rounded-full bg-teal-500 p-1 shadow-sm md:h-32 md:w-32">
