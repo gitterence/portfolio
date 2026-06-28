@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <main className="min-h-screen bg-portfolio-light px-5 text-zinc-900 sm:px-8 md:px-16 lg:px-20 dark:bg-portfolio-dark dark:text-zinc-100 transition-colors duration-300">
-        <div className="m-auto max-w-screen-lg">
+        <div className="m-auto max-w-screen-lg flex flex-col gap-12 md:gap-16 pb-20">
           <Navbar />
           <Hero />
           <AboutMe />

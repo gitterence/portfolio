@@ -131,7 +131,7 @@ export default function Projects() {
   const isDarkMode = theme === "dark" || (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
-    <div className="mb-10">
+    <div>
       <h3 className="mb-5 py-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
         Personal Projects
       </h3>

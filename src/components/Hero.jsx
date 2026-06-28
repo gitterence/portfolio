@@ -8,7 +8,7 @@ import TypewriterText from "./TypewriterText";
 
 export default function Hero() {
   return (
-    <div className="mb-14 md:mb-16">
+    <div>
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,14 +27,12 @@ export default function Hero() {
             className="py-2 text-xl font-medium text-zinc-800 md:text-2xl dark:text-zinc-100"
             delay={500}
           />
-          <div className="min-h-[80px]">
-            <TypewriterText 
-              as="p"
-              text="Building practical software with thoughtful design and reliable engineering."
-              className="text-md mx-auto max-w-lg py-5 leading-8 text-zinc-600 md:text-xl dark:text-zinc-400"
-              delay={1600} // Wait for role to finish typing
-            />
-          </div>
+          <TypewriterText 
+            as="p"
+            text="Building practical software with thoughtful design and reliable engineering."
+            className="text-base mx-auto max-w-lg py-5 leading-8 text-zinc-600 md:text-xl dark:text-zinc-400"
+            delay={1600} // Wait for role to finish typing
+          />
         </div>
       </motion.div>
       <div className="relative mx-auto mb-6 mt-1 h-20 w-20 overflow-hidden rounded-full bg-teal-500 p-1 shadow-sm md:h-32 md:w-32">

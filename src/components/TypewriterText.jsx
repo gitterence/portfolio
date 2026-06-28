@@ -32,15 +32,22 @@ export default function TypewriterText({ text, as: Component = "span", className
   }, [text, delay]);
 
   return (
-    <Component className={className}>
-      {displayText}
-      {isStarted && !isFinished && (
-        <motion.span
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-          className="inline-block ml-1 w-[3px] h-[0.85em] bg-teal-500 align-baseline"
-        />
-      )}
+    <Component className={`${className} grid`}>
+      {/* Invisible text reserves exact physical space to prevent layout shifts */}
+      <span className="invisible col-start-1 row-start-1 text-inherit">
+        {text}
+      </span>
+      {/* Visible typing text */}
+      <span className="col-start-1 row-start-1 text-inherit">
+        {displayText}
+        {isStarted && !isFinished && (
+          <motion.span
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+            className="inline-block ml-1 w-[3px] h-[0.85em] bg-teal-500 align-baseline"
+          />
+        )}
+      </span>
     </Component>
   );
 }
