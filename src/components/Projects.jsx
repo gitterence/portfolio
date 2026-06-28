@@ -9,7 +9,7 @@ import brightPortfolio from "../../public/bright_portfolio.webp";
 import darkPortfolio from "../../public/dark_portfolio.webp";
 import focusTimer from "../../public/focus_timer.webp";
 import roboFriends from "../../public/robo_friends.webp";
-import skyLite from "../../public/sky-lite.webp";
+import skyLite from "../../public/skylite.webp";
 import todoList from "../../public/todo_list.webp";
 
 const projects = [
