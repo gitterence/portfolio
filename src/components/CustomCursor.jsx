@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const isVisibleRef = useRef(false);
 
   // Initial position off-screen
   const cursorX = useMotionValue(-100);
@@ -19,19 +20,24 @@ export default function CustomCursor() {
   useEffect(() => {
     const moveCursor = (e) => {
       // Set raw coordinates, we'll offset using margins in the animate block
-      cursorX.set(e.clientX); 
+      cursorX.set(e.clientX);
       cursorY.set(e.clientY);
       
-      if (!isVisible) setIsVisible(true);
+      if (!isVisibleRef.current) {
+        isVisibleRef.current = true;
+        setIsVisible(true);
+      }
     };
 
     const handleMouseOver = (e) => {
+      if (!(e.target instanceof Element)) return;
+
       // Check if we are hovering over an interactive element
       if (
-        e.target.tagName.toLowerCase() === 'a' ||
-        e.target.tagName.toLowerCase() === 'button' ||
-        e.target.closest('a') ||
-        e.target.closest('button')
+        e.target.tagName.toLowerCase() === "a" ||
+        e.target.tagName.toLowerCase() === "button" ||
+        e.target.closest("a") ||
+        e.target.closest("button")
       ) {
         setIsHovering(true);
       } else {
@@ -39,7 +45,10 @@ export default function CustomCursor() {
       }
     };
 
-    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseLeave = () => {
+      isVisibleRef.current = false;
+      setIsVisible(false);
+    };
 
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mouseover", handleMouseOver);
@@ -50,7 +59,7 @@ export default function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver);
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [cursorX, cursorY, isVisible]);
+  }, [cursorX, cursorY]);
 
   return (
     <motion.div

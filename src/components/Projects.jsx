@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import { BsArrowUpRight } from "react-icons/bs";
 
 import brightPortfolio from "../../public/bright_portfolio.webp";
 import darkPortfolio from "../../public/dark_portfolio.webp";
@@ -50,7 +51,7 @@ const projects = [
   },
 ];
 
-const viewLinkStyles = "inline-flex rounded-full bg-zinc-800 px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 ease-in-out hover:bg-zinc-700 active:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-teal-600/30 dark:bg-zinc-200 dark:text-zinc-900 dark:hover:bg-white";
+const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out hover:border-teal-500/40 hover:bg-white hover:text-zinc-950 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:hover:border-teal-400/40 dark:hover:bg-zinc-800 dark:hover:text-white";
 
 function ProjectItem({ project, index, mounted, isDarkMode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -111,8 +112,10 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Open ${project.title} project`}
           >
-            View
+            <span>View</span>
+            <BsArrowUpRight className="text-[0.7rem] transition-transform duration-200 group-hover/view:-translate-y-0.5 group-hover/view:translate-x-0.5" />
           </a>
         )}
       </div>
@@ -122,13 +125,13 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
 
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const isDarkMode = theme === "dark" || (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <div>

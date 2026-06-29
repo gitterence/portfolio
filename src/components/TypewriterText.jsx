@@ -10,25 +10,28 @@ export default function TypewriterText({ text, as: Component = "span", className
 
   useEffect(() => {
     let index = 0;
+    let intervalId;
+
     setDisplayText(""); // Reset text on mount or text change
     setIsFinished(false);
     setIsStarted(false);
     
     const timeout = setTimeout(() => {
       setIsStarted(true);
-      const interval = setInterval(() => {
+      intervalId = setInterval(() => {
         setDisplayText(text.slice(0, index + 1));
         index++;
         if (index >= text.length) {
-          clearInterval(interval);
+          clearInterval(intervalId);
           setIsFinished(true);
         }
       }, 50); // Speed of typing (50ms per character)
-      
-      return () => clearInterval(interval);
     }, delay);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(intervalId);
+    };
   }, [text, delay]);
 
   return (

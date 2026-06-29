@@ -11,7 +11,7 @@ const MOON_ANIMATION_DURATION = 3;
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   
   const time = useTime();
   const rotate = useTransform(time, [0, SUN_ROTATION_DURATION], [0, 360], { clamp: false });
@@ -21,7 +21,7 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  const isDarkMode = theme === "dark" || (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <nav className="mb-3 flex items-center justify-between py-8 md:py-10">

@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
 import { motion } from "framer-motion";
 
 export default function AboutMe() {
-  const highlightClass = "font-medium text-teal-700 dark:text-teal-400 transition-all duration-300 cursor-default hover:text-teal-600 dark:hover:text-teal-300 hover:[text-shadow:0_0_12px_rgba(15,118,110,0.4)] dark:hover:[text-shadow:0_0_12px_rgba(45,212,191,0.6)]";
+  const highlightClass = "font-medium text-teal-700 dark:text-teal-400 transition-[color,text-shadow] duration-300 cursor-default hover:text-teal-600 dark:hover:text-teal-300 hover:[text-shadow:0_0_12px_rgba(15,118,110,0.4)] dark:hover:[text-shadow:0_0_12px_rgba(45,212,191,0.6)]";
 
 
   return (
