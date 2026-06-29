@@ -6,6 +6,8 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import profilepic from "../../public/ty_profile_pic.webp";
 import TypewriterText from "./TypewriterText";
 
+const socialLinkStyles = "flex size-12 items-center justify-center rounded-full border border-transparent text-zinc-600 transition-[background-color,border-color,box-shadow,color] duration-300 hover:border-zinc-200 hover:bg-white/80 hover:text-zinc-900 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/80 dark:hover:text-zinc-100";
+
 export default function Hero() {
   return (
     <div>
@@ -43,19 +45,18 @@ export default function Hero() {
           alt="profile-pic"
         />
       </div>
-      <div className="flex justify-center gap-16 py-3 text-4xl">
+      <div className="flex justify-center gap-8 py-3 text-4xl sm:gap-12">
         <motion.a
           href="https://www.linkedin.com/in/terence-ye"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Terence Ye's LinkedIn profile"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="relative group"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.94 }}
+          className={socialLinkStyles}
         >
-          <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           <AiFillLinkedin
-            className="relative z-10 cursor-pointer text-zinc-600 transition-colors duration-300 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="text-[2rem]"
           />
         </motion.a>
         <motion.a
@@ -63,13 +64,12 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Terence Ye's GitHub profile"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="relative group"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.94 }}
+          className={socialLinkStyles}
         >
-          <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
           <AiFillGithub
-            className="relative z-10 cursor-pointer text-zinc-600 transition-colors duration-300 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="text-[2rem]"
           />
         </motion.a>
       </div>

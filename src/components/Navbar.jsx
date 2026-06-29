@@ -27,50 +27,52 @@ export default function Navbar() {
     <nav className="mb-3 flex items-center justify-between py-8 md:py-10">
       <h1 className="font-mono text-xl text-zinc-800 dark:text-zinc-100">Portfolio</h1>
       <ul className="flex items-center">
-        <motion.li 
-          whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-          className="group relative flex items-center"
-        >
-          <div className="absolute inset-0 rounded-full bg-zinc-200/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-700/60" />
-          
+        <li className="flex size-10 items-center justify-center">
           {mounted ? (
             isDarkMode ? (
               <motion.button
                 type="button"
                 aria-label="Switch to light mode"
                 onClick={() => setTheme("light")}
-                style={{ rotate }}
-                className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-700/60"
+                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 hover:bg-zinc-700/60 active:bg-zinc-700/70"
+                whileTap={{ scale: 0.9 }}
               >
-                <BsFillSunFill
-                  className="text-2xl text-yellow-300 transition-colors duration-300 hover:text-yellow-200"
-                />
+                <motion.span style={{ rotate }} className="flex items-center justify-center">
+                  <BsFillSunFill
+                    className="text-2xl text-yellow-300 transition-colors duration-300 hover:text-yellow-200"
+                  />
+                </motion.span>
               </motion.button>
             ) : (
               <motion.button
                 type="button"
                 aria-label="Switch to dark mode"
                 onClick={() => setTheme("dark")}
-                className="relative z-10 flex items-center justify-center rounded-full p-2 transition-colors duration-300 hover:bg-zinc-200/70"
-                animate={{
-                  y: [0, -3, 0],
-                  opacity: [0.8, 1, 0.8],
-                }}
-                transition={{
-                  duration: MOON_ANIMATION_DURATION,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 hover:bg-zinc-200/70 active:bg-zinc-200/80"
+                whileTap={{ scale: 0.9 }}
               >
-                <BsFillMoonStarsFill
-                  className="text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
-                />
+                <motion.span
+                  className="flex items-center justify-center"
+                  animate={{
+                    y: [0, -3, 0],
+                    opacity: [0.8, 1, 0.8],
+                  }}
+                  transition={{
+                    duration: MOON_ANIMATION_DURATION,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <BsFillMoonStarsFill
+                    className="text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
+                  />
+                </motion.span>
               </motion.button>
             )
           ) : (
-            <div className="relative z-10 flex items-center justify-center rounded-full p-2 w-10 h-10" />
+            <div className="size-10 rounded-full" />
           )}
-        </motion.li>
+        </li>
       </ul>
     </nav>
   );
