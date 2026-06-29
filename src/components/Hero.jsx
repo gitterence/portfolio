@@ -6,7 +6,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import profilepic from "../../public/ty_profile_pic.webp";
 import TypewriterText from "./TypewriterText";
 
-const socialLinkStyles = "flex size-12 items-center justify-center rounded-full border border-transparent text-zinc-600 transition-[background-color,border-color,box-shadow,color] duration-300 hover:border-zinc-200 hover:bg-white/80 hover:text-zinc-900 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/80 dark:hover:text-zinc-100";
+const socialLinkStyles = "flex size-12 items-center justify-center rounded-full border border-transparent text-zinc-600 transition-[background-color,border-color,box-shadow,color] duration-300 hover:border-zinc-200 hover:bg-white/80 hover:text-zinc-900 hover:shadow-sm active:border-zinc-200 active:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/80 dark:hover:text-zinc-100 dark:active:border-zinc-700 dark:active:bg-zinc-800";
 
 export default function Hero() {
   return (
@@ -45,7 +45,7 @@ export default function Hero() {
           alt="profile-pic"
         />
       </div>
-      <div className="flex justify-center gap-8 py-3 text-4xl sm:gap-12">
+      <div className="flex justify-center gap-8 py-3 sm:gap-12">
         <motion.a
           href="https://www.linkedin.com/in/terence-ye"
           target="_blank"

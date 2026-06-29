@@ -51,7 +51,7 @@ const projects = [
   },
 ];
 
-const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out hover:border-teal-500/40 hover:bg-white hover:text-zinc-950 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:hover:border-teal-400/40 dark:hover:bg-zinc-800 dark:hover:text-white";
+const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out hover:border-teal-500/40 hover:bg-white hover:text-zinc-950 hover:shadow-md active:border-teal-500/50 active:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:hover:border-teal-400/40 dark:hover:bg-zinc-800 dark:hover:text-white dark:active:border-teal-400/50 dark:active:bg-zinc-800";
 
 function ProjectItem({ project, index, mounted, isDarkMode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
