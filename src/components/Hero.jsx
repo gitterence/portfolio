@@ -42,7 +42,7 @@ export default function Hero() {
           className="rounded-full"
           src={profilepic}
           sizes="(min-width: 768px) 128px, 80px"
-          loading="eager"
+          priority
           placeholder="blur"
           alt="Terence Ye profile portrait"
         />
