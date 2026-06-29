@@ -57,12 +57,29 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseMove = (e) => {
+  const canShowSpotlight = (e) => (
+    e.pointerType === "mouse" &&
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  );
+
+  const handlePointerMove = (e) => {
+    if (!canShowSpotlight(e)) return;
+
     const rect = e.currentTarget.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
+  };
+
+  const handlePointerEnter = (e) => {
+    if (canShowSpotlight(e)) setIsHovering(true);
+  };
+
+  const handlePointerLeave = () => setIsHovering(false);
+
+  const handlePointerDown = (e) => {
+    if (!canShowSpotlight(e)) setIsHovering(false);
   };
 
   return (
@@ -72,9 +89,10 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      onPointerMove={handlePointerMove}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onPointerDown={handlePointerDown}
     >
       {/* Spotlight Overlay */}
       {isHovering && (
