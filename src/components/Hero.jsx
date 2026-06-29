@@ -41,8 +41,8 @@ export default function Hero() {
         <Image
           className="rounded-full"
           src={profilepic}
-          priority={true}
-          alt="profile-pic"
+          sizes="(min-width: 768px) 128px, 80px"
+          alt="Terence Ye profile portrait"
         />
       </div>
       <div className="flex justify-center gap-8 py-3 sm:gap-12">

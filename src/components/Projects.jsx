@@ -51,7 +51,7 @@ const projects = [
   },
 ];
 
-const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out supports-hover:border-teal-500/40 supports-hover:bg-white supports-hover:text-zinc-950 supports-hover:shadow-md active:border-teal-500/50 active:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:supports-hover:border-teal-400/40 dark:supports-hover:bg-zinc-800 dark:supports-hover:text-white dark:active:border-teal-400/50 dark:active:bg-zinc-800";
+const viewLinkStyles = "group/view inline-flex h-8 w-full items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out supports-hover:border-teal-500/40 supports-hover:bg-white supports-hover:text-zinc-950 supports-hover:shadow-md active:border-teal-500/50 active:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 sm:w-auto dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:supports-hover:border-teal-400/40 dark:supports-hover:bg-zinc-800 dark:supports-hover:text-white dark:active:border-teal-400/50 dark:active:bg-zinc-800";
 
 function ProjectItem({ project, index, mounted, isDarkMode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -84,7 +84,7 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
 
   return (
     <motion.li 
-      className="group relative flex items-center justify-between gap-x-4 py-4 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-2xl transition-colors supports-hover:bg-zinc-50/50 dark:supports-hover:bg-zinc-800/30"
+      className="group relative grid min-h-[9.5rem] grid-cols-[minmax(0,1fr)_5rem] items-start gap-3 rounded-2xl px-3 py-4 transition-colors supports-hover:bg-zinc-50/50 sm:-mx-6 sm:flex sm:min-h-0 sm:items-center sm:justify-between sm:gap-x-4 sm:px-6 dark:supports-hover:bg-zinc-800/30"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -104,8 +104,8 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
         />
       )}
 
-      <div className="relative z-10 flex min-w-0 flex-1 gap-x-4">
-        <div className="relative size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800">
+      <div className="relative z-10 min-w-0 sm:flex sm:flex-1 sm:gap-x-4">
+        <div className="relative hidden size-16 flex-none overflow-hidden rounded-lg bg-zinc-100 sm:block dark:bg-zinc-800">
           <Image
             src={mounted && isDarkMode ? project.image : project.imageForBrightMode}
             alt={project.title}
@@ -123,7 +123,16 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
           </p>
         </div>
       </div>
-      <div className="relative z-10 flex min-w-14 shrink-0 justify-end">
+      <div className="relative z-10 flex w-20 shrink-0 flex-col gap-2 justify-self-end sm:w-auto sm:flex-row sm:items-center sm:justify-end">
+        <div className="relative size-20 flex-none overflow-hidden rounded-lg bg-zinc-100 shadow-sm ring-1 ring-zinc-200/70 sm:hidden dark:bg-zinc-800 dark:ring-zinc-700/80">
+          <Image
+            src={mounted && isDarkMode ? project.image : project.imageForBrightMode}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="80px"
+          />
+        </div>
         {project.link && (
           <a
             className={viewLinkStyles}
