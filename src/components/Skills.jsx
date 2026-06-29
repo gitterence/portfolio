@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const skillCards = [
   {
     title: "Frontend",
-    description: "Building polished, maintainable user experiences",
+    description: "Building polished, intuitive user experiences",
     skills: [
       "React, TypeScript, JavaScript",
       "Responsive UI Development",
