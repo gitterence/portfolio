@@ -15,5 +15,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("supports-hover", "@media (hover: hover) and (pointer: fine) { &:hover }");
+    },
+  ],
 };

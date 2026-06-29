@@ -51,7 +51,7 @@ const projects = [
   },
 ];
 
-const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out hover:border-teal-500/40 hover:bg-white hover:text-zinc-950 hover:shadow-md active:border-teal-500/50 active:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:hover:border-teal-400/40 dark:hover:bg-zinc-800 dark:hover:text-white dark:active:border-teal-400/50 dark:active:bg-zinc-800";
+const viewLinkStyles = "group/view inline-flex min-w-[5.25rem] items-center justify-center gap-1.5 rounded-full border border-zinc-200/80 bg-white/75 px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur transition-[background-color,border-color,box-shadow,color] duration-200 ease-out supports-hover:border-teal-500/40 supports-hover:bg-white supports-hover:text-zinc-950 supports-hover:shadow-md active:border-teal-500/50 active:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-zinc-200 dark:supports-hover:border-teal-400/40 dark:supports-hover:bg-zinc-800 dark:supports-hover:text-white dark:active:border-teal-400/50 dark:active:bg-zinc-800";
 
 function ProjectItem({ project, index, mounted, isDarkMode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -67,7 +67,7 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
 
   return (
     <motion.li 
-      className="group relative flex items-center justify-between gap-x-4 py-4 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-2xl transition-colors hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30"
+      className="group relative flex items-center justify-between gap-x-4 py-4 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-2xl transition-colors supports-hover:bg-zinc-50/50 dark:supports-hover:bg-zinc-800/30"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -115,7 +115,7 @@ function ProjectItem({ project, index, mounted, isDarkMode }) {
             aria-label={`Open ${project.title} project`}
           >
             <span>View</span>
-            <BsArrowUpRight className="text-[0.7rem] transition-transform duration-200 group-hover/view:-translate-y-0.5 group-hover/view:translate-x-0.5" />
+            <BsArrowUpRight className="text-[0.7rem]" />
           </a>
         )}
       </div>

@@ -49,7 +49,7 @@ export default function Skills() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: index * 0.15, duration: 0.5 }}
           >
-            <div className="flex h-full flex-col rounded-xl border border-zinc-200 bg-[#FFFCF6] p-6 shadow-sm transition-[transform,border-color,box-shadow,background-color] duration-300 hover:-translate-y-2 hover:border-teal-500/50 hover:shadow-xl dark:border-zinc-700 dark:bg-[#2B2C30] dark:hover:border-teal-400/50 dark:hover:shadow-black/40">
+            <div className="flex h-full flex-col rounded-xl border border-zinc-200 bg-[#FFFCF6] p-6 shadow-sm transition-[transform,border-color,box-shadow,background-color] duration-300 supports-hover:-translate-y-2 supports-hover:border-teal-500/50 supports-hover:shadow-xl dark:border-zinc-700 dark:bg-[#2B2C30] dark:supports-hover:border-teal-400/50 dark:supports-hover:shadow-black/40">
               <div className="mb-5">
                 <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
                   {card.title}

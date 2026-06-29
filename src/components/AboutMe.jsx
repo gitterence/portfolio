@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function AboutMe() {
-  const highlightClass = "font-medium text-teal-700 dark:text-teal-400 transition-[color,text-shadow] duration-300 cursor-default hover:text-teal-600 dark:hover:text-teal-300 hover:[text-shadow:0_0_12px_rgba(15,118,110,0.4)] dark:hover:[text-shadow:0_0_12px_rgba(45,212,191,0.6)]";
+  const highlightClass = "font-medium text-teal-700 dark:text-teal-400 transition-[color,text-shadow] duration-300 cursor-default supports-hover:text-teal-600 dark:supports-hover:text-teal-300 supports-hover:[text-shadow:0_0_12px_rgba(15,118,110,0.4)] dark:supports-hover:[text-shadow:0_0_12px_rgba(45,212,191,0.6)]";
 
   return (
     <div>
@@ -18,7 +18,7 @@ export default function AboutMe() {
         <p className="text-base py-2 leading-8 text-zinc-700 dark:text-zinc-300">
           Hi, I&apos;m Terence Ye, a <span className={highlightClass}>Software Engineer</span> at{" "}
           <a
-            className="rounded-sm text-blue-600 transition-colors duration-200 hover:text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:text-blue-400 dark:hover:text-blue-300"
+            className="rounded-sm text-blue-600 transition-colors duration-200 supports-hover:text-blue-700 supports-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25 dark:text-blue-400 dark:supports-hover:text-blue-300"
             href="https://www.indeed.com/about"
             target="_blank"
             rel="noopener noreferrer"

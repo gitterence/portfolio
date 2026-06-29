@@ -34,12 +34,12 @@ export default function Navbar() {
                 type="button"
                 aria-label="Switch to light mode"
                 onClick={() => setTheme("light")}
-                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 hover:bg-zinc-700/60 active:bg-zinc-700/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/30"
+                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 supports-hover:bg-zinc-700/60 active:bg-zinc-700/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/30"
                 whileTap={{ scale: 0.9 }}
               >
                 <motion.span style={{ rotate }} className="flex items-center justify-center">
                   <BsFillSunFill
-                    className="text-2xl text-yellow-300 transition-colors duration-300 hover:text-yellow-200"
+                    className="text-2xl text-yellow-300 transition-colors duration-300 supports-hover:text-yellow-200"
                   />
                 </motion.span>
               </motion.button>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 type="button"
                 aria-label="Switch to dark mode"
                 onClick={() => setTheme("dark")}
-                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 hover:bg-zinc-200/70 active:bg-zinc-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25"
+                className="flex size-10 items-center justify-center rounded-full transition-colors duration-300 supports-hover:bg-zinc-200/70 active:bg-zinc-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/25"
                 whileTap={{ scale: 0.9 }}
               >
                 <motion.span
@@ -64,7 +64,7 @@ export default function Navbar() {
                   }}
                 >
                   <BsFillMoonStarsFill
-                    className="text-2xl text-zinc-700 transition-colors duration-300 hover:text-zinc-900"
+                    className="text-2xl text-zinc-700 transition-colors duration-300 supports-hover:text-zinc-900"
                   />
                 </motion.span>
               </motion.button>
