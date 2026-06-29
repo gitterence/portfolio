@@ -43,7 +43,6 @@ export default function Hero() {
           src={profilepic}
           sizes="(min-width: 768px) 128px, 80px"
           priority
-          placeholder="blur"
           alt="Terence Ye profile portrait"
         />
       </div>
